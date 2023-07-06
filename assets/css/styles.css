@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Common: class chung */
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  padding: 0 16px;
+  line-height: 50px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  border-radius: 24.5px;
+  background: #171100;
+}
+
+/* Header */
+.header {
+  background-color: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  /* Do ở dưới bottom hở 8px và top 36 mình muốn nó neo lại tại 8px thì trừ đi còn 28px */
+  top: -28px;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  position: relative;
+  padding: 8px 21px;
+  font-size: 1.6rem;
+  color: #5f5b53;
+}
+
+.nav a:hover,
+.nav li.active a {
+  /* font-weight: 600; */
+  /* Tạo bóng đổ */
+  text-shadow: 1px 0 0 currentColor;
+  color: #171100;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  /* Do ở trên padding 21px nên dưới cho thụt vào 21px */
+  left: 21px;
+  /* ko xem được phóng to cái thiết kế đếm số ô nhỏ 1 ô = 1px */
+  bottom: 6px;
+  content: '';
+  display: block;
+  width: 12px;
+  height: 2px;
+  background: #171100;
+  border-radius: 1px;
+}
+
+.header .sign-up-btn {
+  min-width: 144px;
+}
+
+.header .action {
+  /* Theo thiết kế là 70 trừ đi 21 đã padding ở mấy cái nav còn 49 */
+  margin-left: 49px;
+}
