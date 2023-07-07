@@ -131,6 +131,11 @@ a {
   height: 685px;
   object-fit: cover;
   border-radius: 20px;
+  /* cách 1 */
+  /* Thay thì mặc định là baseline đường cơ sở nó sẽ căn theo bottom theo chữ g */
+  /* vertical-align: bottom; */
+  /* Cách 2 */
+  display: block;
 }
 
 .hero-summary {
@@ -140,7 +145,7 @@ a {
   width: 270px;
   /* không đặt chiều cao để nó tự động thích nghi với bottom 
   cứ thêm item nó sẽ căn theo bottom mà đẩy lên */
-  padding: 28px 24px;
+  padding: 24px;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
@@ -148,6 +153,7 @@ a {
 
 .hero-summary .item {
   display: flex;
+  align-items: center;
 }
 
 .hero-summary .item + .item {
