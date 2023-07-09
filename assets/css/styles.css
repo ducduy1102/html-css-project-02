@@ -64,6 +64,23 @@ a {
   font-size: 3.8rem;
   line-height: 1.26;
 }
+
+/* Xử lý tràn dòng */
+.line-clamp {
+  display: -webkit-box;
+  /* Gán giá trị mặc định 1 dòng nếu xuống hàng là tạo ... */
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
 /* --------------------------Header-------------------------- */
 .header {
   background-color: #fffcf4;
@@ -369,6 +386,8 @@ a {
 }
 
 .popular .course-item .title a {
+  /* Thêm padding để tránh tình trạng tiêu đề sát ngôi sao */
+  padding-right: 6px;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.67;
