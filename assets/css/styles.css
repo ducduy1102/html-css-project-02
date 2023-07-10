@@ -434,8 +434,17 @@ a {
   background: #2e2100;
 }
 
+/* Feedback #1, 2 */
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Feedback #1, 2 */
 .feedback-item {
   display: flex;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .feedback-item .avatar {
