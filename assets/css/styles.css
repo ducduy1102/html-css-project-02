@@ -594,10 +594,14 @@ a {
   display: flex;
   gap: 30px;
   margin-top: 55px;
+  overflow: hidden;
 }
 
 .blog .item {
-  width: 33.33%;
+  flex-shrink: 0;
+  /* lỖI Cắt ảnh cuối do đã set with 33.33% nhưng thêm flex-gap + 30px mỗi lần nữa => bị cắt tại ảnh cuối */
+  /* lấy 30 x 2 : 3 = 20 */
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #fff;
 }
@@ -660,6 +664,30 @@ a {
   color: #171100;
 }
 
+.blog .item .btn {
+  font-size: 1.4rem;
+}
+
 .blog .item .btn:hover {
   background: var(--primary-color);
+}
+
+.blog .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.blog .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.blog .dots .dot.active {
+  background: var(--primary-color);
+  cursor: default;
 }
