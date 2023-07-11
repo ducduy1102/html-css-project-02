@@ -708,7 +708,7 @@ a {
   /* 260/1170 */
   width: 21.6%;
 }
-.footer .row .column:first-child(1) {
+.footer .row .column:first-child {
   /* 412/1170 */
   width: 35%;
 }
