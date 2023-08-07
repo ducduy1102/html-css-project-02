@@ -1,0 +1,246 @@
+/* ---------------PC--------------- */
+@media screen and (min-width: 992px) {
+  .mobile-header,
+  .toggle-menu {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
+
+  /* .feature-tablet-content {
+    display: none;
+  } */
+}
+
+/* ---------------Tablet and mobile--------------- */
+@media screen and (max-width: 991.98px) {
+  .tablet-content {
+    max-width: calc(100% - 10px);
+  }
+
+  .logo {
+    position: absolute;
+    /* Căn giữa logo */
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .toggle-menu svg {
+    width: 24px;
+    color: #666;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+  }
+
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40% 0 0;
+    background: #fff;
+    z-index: 2;
+    padding: 60px;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+
+  .menu-drawer ul {
+    margin-top: 32px;
+  }
+
+  .menu-drawer ul a {
+    display: block;
+    padding: 14px 0;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  .separate {
+    border-top: 1.5px solid #ebebeb;
+  }
+
+  .hero .body {
+    flex-direction: column;
+  }
+
+  .hero .media-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+
+  .hero-summary {
+    position: relative;
+    top: 0;
+  }
+
+  .hero .content-block {
+    padding: 64px 0;
+    width: 100%;
+  }
+
+  .heading.lv1 {
+    font-size: 4.8rem;
+  }
+
+  .heading.lv1,
+  .hero .desc {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero .desc {
+    width: 90%;
+    margin-top: 22px;
+  }
+
+  .hero .cta-group {
+    width: 100%;
+    justify-content: center;
+    column-gap: 60px;
+  }
+
+  .hero .stats {
+    margin-top: 40px;
+  }
+
+  .hero .stats strong:nth-child(2) {
+    margin-left: 60px;
+  }
+
+  .popular .course-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feedback-item {
+    align-items: center;
+  }
+
+  .feedback-item .info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .feedback-item .dots {
+    justify-content: center;
+  }
+
+  .features .body {
+    flex-direction: column-reverse;
+  }
+
+  .features .content {
+    width: 100%;
+  }
+
+  .features .images {
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .heading.lv2 {
+    width: 100%;
+  }
+
+  .features .content .cta-btn {
+    margin: 20px auto 0;
+  }
+
+  .features-2nd .images img {
+    margin-top: 20px;
+  }
+
+  .logo-tablet {
+    position: relative;
+    display: block;
+    top: 13px;
+    left: 40px;
+  }
+
+  .footer {
+    padding: 96px 96px 32px;
+  }
+
+  .footer .row {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+  }
+
+  .footer .row .column {
+    width: 100%;
+  }
+
+  .footer .row .column:first-child {
+    grid-column: 1/3;
+    width: 100%;
+  }
+
+  .footer .socials {
+    margin-top: 20px;
+  }
+
+  .footer .desc {
+    max-width: 100%;
+  }
+
+  .footer .column-contact {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+
+/* ---------------Tablet--------------- */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .show-on-mobile {
+    display: none;
+  }
+}
+
+/* ---------------Mobile--------------- */
+@media screen and (max-width: 767.98px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .menu-drawer {
+    inset: 0 25% 0 0;
+    /* or inset: 0;
+      rồi tạo thêm dấu x dùng label ấn cho nó đóng */
+    padding: 40px;
+  }
+
+  .navbar .action {
+    display: none;
+  }
+}
